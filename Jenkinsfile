@@ -6,19 +6,19 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           sh 'npm install' 
+           rsh 'npm install' 
         }
      }
      
      stage('Test') { 
         steps { 
-           sh 'echo "testing application..."'
+           rsh 'echo "testing application..."'
         }
       }
 
          stage("Deploy nodejs application") { 
          steps { 
-           sh 'echo "deploying application..."'
+           rsh 'echo "deploying application..."'
          }
 
      }
